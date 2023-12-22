@@ -1,0 +1,99 @@
+commit aaf698d44a19bab111cf8e1ceac723a1f44236df
+Author: Nils Hollenstein <144909884+nilshollenstein@users.noreply.github.com>
+Date:   Fri Dec 22 14:13:46 2023 +0000
+
+    chore: swagger is now complete
+
+commit 5b9f06a2d80166301a768dd997db87491a543eac
+Author: Nils Hollenstein <144909884+nilshollenstein@users.noreply.github.com>
+Date:   Fri Dec 22 13:47:40 2023 +0000
+
+    Chore: created log file(empty), begun adding comments
+    moved the package files and dicts out of src
+
+commit ac40768daf9cf51c2fe1e19d09284df32560f800
+Author: Nils Hollenstein <144909884+nilshollenstein@users.noreply.github.com>
+Date:   Fri Dec 22 13:28:29 2023 +0000
+
+    Chore: Added the test JSON file from hoppscotch
+    added a OpenAPI swagger documentation
+
+commit 45188829e1ca35e53969013a7daa88484eb28b2f
+Author: Nils Hollenstein <144909884+nilshollenstein@users.noreply.github.com>
+Date:   Fri Dec 22 13:01:27 2023 +0000
+
+    Chore: Begun to add a OpenAPI documentation with swagger
+
+commit a7121f533f010cc3bbb48660a08c2df5be9aec99
+Author: Nils Hollenstein <144909884+nilshollenstein@users.noreply.github.com>
+Date:   Fri Dec 22 12:56:44 2023 +0000
+
+    Chore: added the last swagger comments
+
+commit a7508213bd6130da3cd9bbe1183513acaa4ac17f
+Author: Nils Hollenstein <144909884+nilshollenstein@users.noreply.github.com>
+Date:   Fri Dec 22 12:46:02 2023 +0000
+
+    Chore: renamed the endpoints file, added first few swagger comments
+
+commit b3cee4943eef3503543a7f72bb938a14188d76d1
+Author: Nils Hollenstein <144909884+nilshollenstein@users.noreply.github.com>
+Date:   Fri Dec 22 12:09:46 2023 +0000
+
+    Chore: forgotten formatted File
+
+commit 28e2b8dcb2f216d82fb8d155e6d788ee7d303c2d
+Author: Nils Hollenstein <144909884+nilshollenstein@users.noreply.github.com>
+Date:   Fri Dec 22 12:09:20 2023 +0000
+
+    Chore: Formatted Code with eslintrc
+
+commit 119fd30422209a34a36068eeabd67fdfa69237e3
+Author: Nils Hollenstein <144909884+nilshollenstein@users.noreply.github.com>
+Date:   Fri Dec 22 11:59:44 2023 +0000
+
+    Endpoints now only acessable, when logged in
+
+commit a1a2db5da7674e80cc14b439afca9b276f971eee
+Author: Nils Hollenstein <144909884+nilshollenstein@users.noreply.github.com>
+Date:   Fri Dec 22 11:56:47 2023 +0000
+
+    Chore: Logout is working
+
+commit db5943e91d62341b5deea30f2ebdcce759755bc6
+Author: Nils Hollenstein <144909884+nilshollenstein@users.noreply.github.com>
+Date:   Fri Dec 22 10:41:56 2023 +0000
+
+    Chore: Post login is working
+
+commit 7a6c7447b6300159791434776f09c38337477f18
+Author: Nils Hollenstein <144909884+nilshollenstein@users.noreply.github.com>
+Date:   Fri Dec 22 10:15:04 2023 +0000
+
+    Chore: created authentication.js
+    for the /login
+    /verify and the /logout endpoint
+
+commit 9593e45583dba35d11334742f3ea98845607a85c
+Author: Nils Hollenstein <144909884+nilshollenstein@users.noreply.github.com>
+Date:   Fri Dec 22 10:12:56 2023 +0000
+
+    Chore:  All normal endpoints are created
+
+commit 3860f92cfbcc3cce68a3f52e1cd62301253f793f
+Author: Nils Hollenstein <144909884+nilshollenstein@users.noreply.github.com>
+Date:   Fri Dec 22 10:01:21 2023 +0000
+
+    Chore: All endpoints up to patch completed
+
+commit 0ab0e06b9f283cbfb03ec20210bb6439dcf0c1b5
+Author: Nils Hollenstein <144909884+nilshollenstein@users.noreply.github.com>
+Date:   Fri Dec 22 08:44:43 2023 +0000
+
+    Chore: first Get request /tasks works
+
+commit b96c9650760acd1f59da3020e54c6175cf3314b3
+Author: Nils Hollenstein <144909884+nilshollenstein@users.noreply.github.com>
+Date:   Fri Dec 22 08:00:19 2023 +0000
+
+    Chore: Createt the Important folders and files for the project
