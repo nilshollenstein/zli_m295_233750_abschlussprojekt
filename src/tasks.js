@@ -12,6 +12,8 @@ router.get('/', (req, res) => {
   }
   console.log('Error 401: Not logged in');
   return res.status(401).json({ error: '401, Not logged in' });
+  // #swagger.summary = 'Get all Tasks'
+  // #swagger.description = 'Use a GET request to get all existing tasks'
 });
 router.post('/', (req, res) => {
   if (req.session.email) {
@@ -36,6 +38,8 @@ router.post('/', (req, res) => {
   }
   console.log('Error 401: Not logged in');
   return res.status(401).json({ error: '401, Not logged in' });
+  // #swagger.summary = 'Create a Task'
+  // #swagger.description = 'Use a POST request to create a task with a JSON object'
 });
 
 router.get('/:id', (req, res) => {
@@ -48,6 +52,8 @@ router.get('/:id', (req, res) => {
   }
   console.log('Error 401: Not logged in');
   return res.status(401).json({ error: '401, Not logged in' });
+  // #swagger.summary = 'Get a singel Task'
+  // #swagger.description = 'Use a Get request with an task id to get a single task'
 });
 router.patch('/:id', (req, res) => {
   if (req.session.email) {
@@ -65,6 +71,8 @@ router.patch('/:id', (req, res) => {
   }
   console.log('Error 401: Not logged in');
   return res.status(401).json({ error: '401, Not logged in' });
+  // #swagger.summary = 'Change a task'
+  // #swagger.description = 'Use a PATCH request to change a task with a JSON object'
 });
 
 router.delete('/:id', (req, res) => {
@@ -79,5 +87,7 @@ router.delete('/:id', (req, res) => {
   }
   console.log('Error 401: Not logged in');
   return res.status(401).json({ error: '401, Not logged in' });
+  // #swagger.summary = 'Delete a task'
+  // #swagger.description = 'Use a Delete request with a task id to delete a task '
 });
 module.exports = router;
