@@ -5,16 +5,15 @@ With this programme you can create, view, edit and delete tasks and nobody can s
 
 
 ## Setup:
-1. Download the dictionary
+1. Copy the repository Repository: https://github.com/nilshollenstein/zli_m295_233750_abschlussprojekt.git  
 2. Make sure that docker is running
-3. Open the folder in VS Code
-4. Reopen the folder in a Node.js Javascript container
-5. Run npm install
-6. Run npm run start
-7. Open a Client like Hoppscoth or Postman
+3. Reopen the folder in a Node.js Javascript container
+4. Run npm install
+5. Run npm run start
+6. Open a Client like Hoppscoth or Postman
 
 ## Start:
-1. Open the site localhost:3000/swagger-ui to get access to the API-spezification
+1. Open the site http://localhost:3000/swagger-ui to get access to the API-spezification
 2. Now you can use the task tool
 3. To log in, you have to use a POST request  The Body should contain an email adress and a password. The password is set in the authentication.js file, they have to be sent as JSON
 Body: 
