@@ -44,7 +44,7 @@ router.delete('/logout', (req, res) => {
     // Reset Cookie
     req.session.email = null;
 
-    return res.send('Logout successful').status(204);
+    return res.json( {logout:'Logout successful'}).status(204);
   }
 
   return res.status(401).json({ error: 'Not logged in' });

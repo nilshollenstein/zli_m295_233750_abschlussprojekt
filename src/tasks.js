@@ -33,7 +33,7 @@ router.post('/', (req, res) => {
       title: req.body.title,
       author: req.body.author,
       created_at: new Date(),
-      completet_at: null,
+      completet_at: "",
 
     };
 
