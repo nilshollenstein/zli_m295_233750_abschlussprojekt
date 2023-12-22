@@ -1,0 +1,426 @@
+{
+	"v": 2,
+	"name": "Abschlussprojekt",
+	"folders": [
+		{
+			"v": 2,
+			"name": "Get /tasks",
+			"folders": [],
+			"requests": [
+				{
+					"method": "GET",
+					"v": "1",
+					"endpoint": "http://localhost:3000/tasks",
+					"preRequestScript": "",
+					"headers": [],
+					"body": {
+						"body": "{\n\t\"title\": \"sag hallo\",\n  \t\"author\": \"nils\"\n}",
+						"contentType": "application/json"
+					},
+					"testScript": "\n\n// Check status code is 200\npw.test(\"Status code is 200\", ()=> {\n    pw.expect(pw.response.status).toBe(200);\n});",
+					"name": "Get the hole list, Statuscode 200",
+					"params": [],
+					"auth": {
+						"authActive": true,
+						"authType": "none"
+					}
+				}
+			],
+			"auth": {
+				"authType": "inherit",
+				"authActive": true
+			},
+			"headers": []
+		},
+		{
+			"v": 2,
+			"name": "Post /tasks ",
+			"folders": [],
+			"requests": [
+				{
+					"method": "POST",
+					"v": "1",
+					"endpoint": "http://localhost:3000/tasks",
+					"preRequestScript": "",
+					"headers": [],
+					"body": {
+						"body": "{\n\t\"title\": \"sag hallo\",\n  \t\"author\": \"nils\"\n}",
+						"contentType": "application/json"
+					},
+					"testScript": "\n\n// Check status code is 201\npw.test(\"Status code is 201\", ()=> {\n    pw.expect(pw.response.status).toBe(201);\n});",
+					"name": "Create new Task,  Status 201",
+					"params": [],
+					"auth": {
+						"authActive": true,
+						"authType": "none"
+					}
+				},
+				{
+					"method": "POST",
+					"v": "1",
+					"endpoint": "http://localhost:3000/tasks",
+					"preRequestScript": "",
+					"headers": [],
+					"body": {
+						"body": "{\n\t\"title\": \"sag hallo\",\n  \t\"author\": \"nils\"\n}",
+						"contentType": "application/json"
+					},
+					"testScript": "\n\n// Check status code is 201\npw.test(\"Status code is 201\", ()=> {\n    pw.expect(pw.response.status).toBe(201);\n});",
+					"name": "Create new Task,  Status 422",
+					"params": [],
+					"auth": {
+						"authActive": true,
+						"authType": "none"
+					}
+				}
+			],
+			"auth": {
+				"authType": "inherit",
+				"authActive": true
+			},
+			"headers": []
+		},
+		{
+			"v": 2,
+			"name": "Get /tasks/{id}",
+			"folders": [],
+			"requests": [
+				{
+					"method": "GET",
+					"v": "1",
+					"endpoint": "http://localhost:3000/tasks/8946d7bf-2001-4805-8dcd-590cebdc2c8f",
+					"preRequestScript": "",
+					"headers": [],
+					"body": {
+						"body": "{\n\t\"title\": \"sag hallo\",\n  \t\"author\": \"nils\"\n}",
+						"contentType": null
+					},
+					"testScript": "\n\n// Check status code is 200\npw.test(\"Status code is 200\", ()=> {\n    pw.expect(pw.response.status).toBe(200);\n});",
+					"name": "Get a single Task  Status 200",
+					"params": [],
+					"auth": {
+						"authActive": true,
+						"authType": "none"
+					}
+				},
+				{
+					"method": "GET",
+					"v": "1",
+					"endpoint": "http://localhost:3000/tasks/735-4cff-9196-34385b6090f9",
+					"preRequestScript": "",
+					"headers": [],
+					"body": {
+						"body": "{\n\t\"title\": \"sag hallo\",\n  \t\"author\": \"nils\"\n}",
+						"contentType": null
+					},
+					"testScript": "\n\n// Check status code is 404\npw.test(\"Status code is 404\", ()=> {\n    pw.expect(pw.response.status).toBe(404);\n});",
+					"name": "Get a single Task  Status 404, not found objekt",
+					"params": [],
+					"auth": {
+						"authActive": true,
+						"authType": "none"
+					}
+				}
+			],
+			"auth": {
+				"authType": "inherit",
+				"authActive": true
+			},
+			"headers": []
+		},
+		{
+			"v": 2,
+			"name": "Patch /tasks/{id}",
+			"folders": [],
+			"requests": [
+				{
+					"method": "PATCH",
+					"v": "1",
+					"endpoint": "http://localhost:3000/tasks",
+					"preRequestScript": "",
+					"headers": [],
+					"body": {
+						"body": "{\n\t\"title\": \"sag tschau\",\n}",
+						"contentType": "application/json"
+					},
+					"testScript": "\n\n// Check status code is 201\npw.test(\"Status code is 201\", ()=> {\n    pw.expect(pw.response.status).toBe(201);\n});",
+					"name": "Change a Value of a Task, Status 201",
+					"params": [],
+					"auth": {
+						"authActive": true,
+						"authType": "none"
+					}
+				},
+				{
+					"method": "PATCH",
+					"v": "1",
+					"endpoint": "http://localhost:3000/tasks/88454951-b69a-a05330df442f",
+					"preRequestScript": "",
+					"headers": [],
+					"body": {
+						"body": "{\n\t\"title\": \"sag tschau\"\n}",
+						"contentType": "application/json"
+					},
+					"testScript": "\n\n// Check status code is 404\npw.test(\"Status code is 404\", ()=> {\n    pw.expect(pw.response.status).toBe(404);\n});",
+					"name": "Change a Value of a Task, Status 404",
+					"params": [],
+					"auth": {
+						"authActive": true,
+						"authType": "none"
+					}
+				}
+			],
+			"auth": {
+				"authType": "inherit",
+				"authActive": true
+			},
+			"headers": []
+		},
+		{
+			"v": 2,
+			"name": "Patch /tasks/{id}",
+			"folders": [],
+			"requests": [
+				{
+					"method": "DELETE",
+					"v": "1",
+					"endpoint": "http://localhost:3000/tasks/01d47e68-e4f5-473a-8f18-e8abbe2f2c64",
+					"preRequestScript": "",
+					"headers": [],
+					"body": {
+						"body": "{\n\t\"title\": \"sag tschau\"\n}",
+						"contentType": null
+					},
+					"testScript": "\n\n// Check status code is 204\npw.test(\"Status code is 204\", ()=> {\n    pw.expect(pw.response.status).toBe(204);\n});",
+					"name": "Delete a Task, Status 204",
+					"params": [],
+					"auth": {
+						"authActive": true,
+						"authType": "none"
+					}
+				},
+				{
+					"method": "DELETE",
+					"v": "1",
+					"endpoint": "http://localhost:3000/tasks/1",
+					"preRequestScript": "",
+					"headers": [],
+					"body": {
+						"body": "{\n\t\"title\": \"sag tschau\"\n}",
+						"contentType": null
+					},
+					"testScript": "\n\n// Check status code is 204\npw.test(\"Status code is 204\", ()=> {\n    pw.expect(pw.response.status).toBe(404);\n});",
+					"name": "Delete a Task, Status 404",
+					"params": [],
+					"auth": {
+						"authActive": true,
+						"authType": "none"
+					}
+				}
+			],
+			"auth": {
+				"authType": "inherit",
+				"authActive": true
+			},
+			"headers": []
+		},
+		{
+			"v": 2,
+			"name": "Post /login",
+			"folders": [],
+			"requests": [
+				{
+					"method": "POST",
+					"v": "1",
+					"endpoint": "http://localhost:3000/login",
+					"preRequestScript": "",
+					"headers": [],
+					"body": {
+						"body": "{\n\t\"email\": \"nils.hollenstein@gmail.com\",\n  \t\"password\": \"m295\"\n}",
+						"contentType": "application/json"
+					},
+					"testScript": "\n\n// Check status code is 201\npw.test(\"Status code is 201\", ()=> {\n    pw.expect(pw.response.status).toBe(201);\n});",
+					"name": "Login, Status 201",
+					"params": [],
+					"auth": {
+						"authActive": true,
+						"authType": "none"
+					}
+				},
+				{
+					"method": "POST",
+					"v": "1",
+					"endpoint": "http://localhost:3000/login",
+					"preRequestScript": "",
+					"headers": [],
+					"body": {
+						"body": "{\n\t\"email\": \"nils.hollenstein@gmail.com\",\n  \t\"password\": \"m295\"\n}",
+						"contentType": "application/json"
+					},
+					"testScript": "\n\n// Check status code is 201\npw.test(\"Status code is 201\", ()=> {\n    pw.expect(pw.response.status).toBe(201);\n});",
+					"name": "Login, Status 422",
+					"params": [],
+					"auth": {
+						"authActive": true,
+						"authType": "none"
+					}
+				},
+				{
+					"method": "POST",
+					"v": "1",
+					"endpoint": "http://localhost:3000/login",
+					"preRequestScript": "",
+					"headers": [],
+					"body": {
+						"body": "{\n\t\"email\": \"nils.hollenstein@gmail.com\",\n  \t\"password\": \"123\"\n}",
+						"contentType": "application/json"
+					},
+					"testScript": "\n\n// Check status code is 401\npw.test(\"Status code is 401\", ()=> {\n    pw.expect(pw.response.status).toBe(401);\n});",
+					"name": "Login, Status 401",
+					"params": [],
+					"auth": {
+						"authActive": true,
+						"authType": "none"
+					}
+				}
+			],
+			"auth": {
+				"authType": "inherit",
+				"authActive": true
+			},
+			"headers": []
+		},
+		{
+			"v": 2,
+			"name": "Get /verify",
+			"folders": [],
+			"requests": [
+				{
+					"method": "GET",
+					"v": "1",
+					"endpoint": "http://localhost:3000/verify",
+					"preRequestScript": "",
+					"headers": [],
+					"body": {
+						"body": "{\n\t\"email\": \"nils.hollenstein@gmail.com\",\n  \t\"password\": \"123\"\n}",
+						"contentType": null
+					},
+					"testScript": "\n\n// Check status code is 200\npw.test(\"Status code is 200\", ()=> {\n    pw.expect(pw.response.status).toBe(200);\n});",
+					"name": "Verify, Status 200",
+					"params": [],
+					"auth": {
+						"authActive": true,
+						"authType": "none"
+					}
+				},
+				{
+					"method": "GET",
+					"v": "1",
+					"endpoint": "http://localhost:3000/verify",
+					"preRequestScript": "",
+					"headers": [],
+					"body": {
+						"body": "{\n\t\"email\": \"nils.hollenstein@gmail.com\",\n  \t\"password\": \"123\"\n}",
+						"contentType": null
+					},
+					"testScript": "\n\n// Check status code is 401\npw.test(\"Status code is 401\", ()=> {\n    pw.expect(pw.response.status).toBe(401);\n});",
+					"name": "Verify, Status 401",
+					"params": [],
+					"auth": {
+						"authActive": true,
+						"authType": "none"
+					}
+				}
+			],
+			"auth": {
+				"authType": "inherit",
+				"authActive": true
+			},
+			"headers": []
+		},
+		{
+			"v": 2,
+			"name": "Delete /logout",
+			"folders": [],
+			"requests": [
+				{
+					"method": "GET",
+					"v": "1",
+					"endpoint": "http://localhost:3000/verify",
+					"preRequestScript": "",
+					"headers": [],
+					"body": {
+						"body": "{\n\t\"email\": \"nils.hollenstein@gmail.com\",\n  \t\"password\": \"123\"\n}",
+						"contentType": null
+					},
+					"testScript": "\n\n// Check status code is 401\npw.test(\"Status code is 401\", ()=> {\n    pw.expect(pw.response.status).toBe(401);\n});",
+					"name": "Logout, Status 204",
+					"params": [],
+					"auth": {
+						"authActive": true,
+						"authType": "none"
+					}
+				},
+				{
+					"method": "DELETE",
+					"v": "1",
+					"endpoint": "http://localhost:3000/logout",
+					"preRequestScript": "",
+					"headers": [],
+					"body": {
+						"body": "{\n\t\"email\": \"nils.hollenstein@gmail.com\",\n  \t\"password\": \"123\"\n}",
+						"contentType": null
+					},
+					"testScript": "\n\n// Check status code is 401\npw.test(\"Status code is 401\", ()=> {\n    pw.expect(pw.response.status).toBe(401);\n});",
+					"name": "Logout, Status 401",
+					"params": [],
+					"auth": {
+						"authActive": true,
+						"authType": "none"
+					}
+				}
+			],
+			"auth": {
+				"authType": "inherit",
+				"authActive": true
+			},
+			"headers": []
+		},
+		{
+			"v": 2,
+			"name": "Test nonexisting endpoints",
+			"folders": [],
+			"requests": [
+				{
+					"method": "GET",
+					"v": "1",
+					"endpoint": "http://localhost:3000/dfds",
+					"preRequestScript": "",
+					"headers": [],
+					"body": {
+						"body": "{\n\t\"title\": \"sag hallo\",\n  \t\"author\": \"nils\"\n}",
+						"contentType": null
+					},
+					"testScript": "\n\n// Check status code is 404\npw.test(\"Status code is 404\", ()=> {\n    pw.expect(pw.response.status).toBe(404);\n});",
+					"name": "Test, Status 404",
+					"params": [],
+					"auth": {
+						"authActive": true,
+						"authType": "none"
+					}
+				}
+			],
+			"auth": {
+				"authType": "inherit",
+				"authActive": true
+			},
+			"headers": []
+		}
+	],
+	"requests": [],
+	"auth": {
+		"authType": "inherit",
+		"authActive": true
+	},
+	"headers": []
+}

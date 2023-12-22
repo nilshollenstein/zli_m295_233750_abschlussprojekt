@@ -2,8 +2,10 @@
 /* eslint-disable no-console */
 const express = require('express');
 const session = require('express-session');
+const swaggerUi = require('swagger-ui-express');
 const endpoints = require('./tasks');
 const authentication = require('./authentication');
+const swaggerDocument = require('../swagger.json');
 
 const app = express();
 const port = 3000;
@@ -22,13 +24,15 @@ app.use(
 app.use(
   '/',
   authentication,
-  // #swagger.tags = ['Authentification']
+
 );
 app.use(
   '/tasks',
   endpoints,
-  // #swagger.tags = ['Tasks']
 );
+
+app.use('/swagger-ui', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
 });

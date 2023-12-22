@@ -9,6 +9,6 @@ const doc = {
   host: 'localhost:3000',
 };
 
-const outputFile = '../swagger.json';
-const routes = ['./server.js'];
+const outputFile = './swagger.json';
+const routes = ['./src/tasks.js', './src/authentication.js'];
 swaggerAutogen(outputFile, routes, doc);
