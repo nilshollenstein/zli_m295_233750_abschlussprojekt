@@ -1,5 +1,5 @@
 # M295
-Name: Abschlussprojekt M295
+Name: Abschlussprojekt M295  
 Author: Nils Hollenstein
 
 ## Setup:
