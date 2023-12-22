@@ -11,3 +11,6 @@ Author: Nils Hollenstein
 
 ## Start:
 1. Run npm run start
+2. Open a Client like Hoppscoth or Postman
+3. Also open the site localhost:3000/swagger-ui to get access to the API-Spezification
+4. Now you can use the list tool
