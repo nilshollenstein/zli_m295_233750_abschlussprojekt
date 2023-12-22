@@ -1,7 +1,8 @@
 # M295 Leistungsbeurteilung B
 
-Name: task order programm
-Author: Nils Hollenstein
+## Task 
+With this programme you can create, view, edit and delete tasks and nobody can see them without the password.
+
 
 ## Setup:
 1. Download the dictionary
@@ -103,3 +104,6 @@ Output(The email adress): {email: example.example@example.org}
 
 2. To log out, use a DELETE request at the adress: localhost:3000/logout
 Output(The email adress): {logout: Logout successful}
+
+## Author
+-[Nils Hollenstein]https://github.com/nilshollenstein
