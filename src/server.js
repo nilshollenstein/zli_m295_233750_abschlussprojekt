@@ -7,7 +7,7 @@ const port = 3000;
 
 
 app.use(
-	'/',
+	'/tasks',
 	endpoints
 );
 
