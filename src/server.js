@@ -2,7 +2,7 @@
 /* eslint-disable no-console */
 const express = require('express');
 const session = require('express-session');
-const endpoints = require('./endpoints');
+const endpoints = require('./tasks');
 const authentication = require('./authentication');
 
 const app = express();
@@ -22,10 +22,12 @@ app.use(
 app.use(
   '/',
   authentication,
+  // #swagger.tags = ['Authentification']
 );
 app.use(
   '/tasks',
   endpoints,
+  // #swagger.tags = ['Tasks']
 );
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);

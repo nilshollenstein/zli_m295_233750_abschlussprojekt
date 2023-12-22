@@ -21,6 +21,8 @@ router.post('/login', (req, res) => {
   }
   console.log('Error 401: Not logged in');
   return res.status(401).json({ error: '401, Not logged in' });
+  // #swagger.summary = 'Login'
+  // #swagger.description = 'Use a POST request with the email and password in a JSON-Body'
 });
 router.get('/verify', (req, res) => {
   if (req.session.email) {
@@ -28,6 +30,8 @@ router.get('/verify', (req, res) => {
   }
   console.log('Error 401: Not logged in');
   return res.status(401).json({ error: '401, Not logged in' });
+  // #swagger.summary = 'Verify'
+  // #swagger.description = 'Use a GET request to check the status of the client'
 });
 
 router.delete('/logout', (req, res) => {
@@ -39,6 +43,8 @@ router.delete('/logout', (req, res) => {
   }
 
   return res.status(401).json({ error: 'Not logged in' });
+  // #swagger.summary = 'Logout'
+  // #swagger.description = 'Use a Delete request to log out'
 });
 
 module.exports = router;
