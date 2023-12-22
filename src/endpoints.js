@@ -50,7 +50,7 @@ router.patch('/:id', (req, res)=>{
 		oldTask.author = req.body.author || oldTask.author;
 		oldTask.completet_at = req.body.completet_at || oldTask.completet_at;
 		tasks = tasks.map((task=> task.id === req.params.id ? oldTask : task))
-		res.status(201).json(oldTask)
+		return res.status(201).json(oldTask)
 	
 	}
 
@@ -63,7 +63,11 @@ router.patch('/:id', (req, res)=>{
 router.delete('/:id', (req, res)=>{
 
 	if(tasks.some((task)=> task.id === req.params.id)){
-  		
+
+		const deletedTask = tasks.filter((task)=> task.id === req.params.id)
+  		tasks = tasks.filter((task)=>task.id !== req.params.id )
+		return res.json(deletedTask).status(200)
+		
 	}
 	console.log('Error 404 , Task not found')
 	return res.status(404).json({ error: "Error 404, Task not found"});
