@@ -1,3 +1,28 @@
+commit be6fe328bfab2c54f4c2519c5a39aca0bfe93eda
+Author: Nils Hollenstein <144909884+nilshollenstein@users.noreply.github.com>
+Date:   Fri Dec 22 15:32:06 2023 +0000
+
+    chore: again the readme
+
+commit 7a81faffc61dcbe8258c35e8848f1a5b85f5af2b
+Author: Nils Hollenstein <144909884+nilshollenstein@users.noreply.github.com>
+Date:   Fri Dec 22 15:30:31 2023 +0000
+
+    chore: again a readme update
+
+commit 5d6f18809d766ba076db4435cb9726766f744c2e
+Author: Nils Hollenstein <144909884+nilshollenstein@users.noreply.github.com>
+Date:   Fri Dec 22 15:26:33 2023 +0000
+
+    chore: again updatet some little things at the README file
+
+commit bff05f9f9e5727680b018a68eb5646147518617d
+Author: Nils Hollenstein <144909884+nilshollenstein@users.noreply.github.com>
+Date:   Fri Dec 22 15:21:22 2023 +0000
+
+    chore: README.md is finished
+    correctet some little issues, logged the git history new
+
 commit bd022c0279853d1f9429a33e8f30d0e36eb99706
 Author: Nils Hollenstein <144909884+nilshollenstein@users.noreply.github.com>
 Date:   Fri Dec 22 14:50:51 2023 +0000
