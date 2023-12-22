@@ -26,11 +26,12 @@ app.use(
 app.use(
   '/',
   authentication,
-
+  // #swagger.tags = ['Authentication']
 );
 app.use(
   '/tasks',
   endpoints,
+  // #swagger.tags = ['Tasks']
 );
 
 // load swagger-ui-express to display the swagger ui

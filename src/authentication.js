@@ -7,7 +7,7 @@ const router = express.Router();
 const credentials = {
   password: 'm295',
 };
-// #swagger.tags = ['Authentication']
+
 
 // POST for login
 router.post('/login', (req, res) => {

@@ -15,6 +15,9 @@
       "get": {
         "summary": "Get all Tasks",
         "description": "Use a GET request to get all existing tasks",
+        "tags": [
+          "tasks"
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -27,6 +30,9 @@
       "post": {
         "summary": "Create a Task",
         "description": "Use a POST request to create a task with a JSON object",
+        "tags": [
+          "tasks"
+        ],
         "parameters": [
           {
             "name": "body",
@@ -61,6 +67,9 @@
       "get": {
         "summary": "Get a singel Task",
         "description": "Use a Get request with an task id to get a single task",
+        "tags": [
+          "tasks"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -84,6 +93,9 @@
       "patch": {
         "summary": "Change a task",
         "description": "Use a PATCH request to change a task with a JSON object",
+        "tags": [
+          "tasks"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -125,6 +137,9 @@
       "delete": {
         "summary": "Delete a task",
         "description": "Use a Delete request with a task id to delete a task ",
+        "tags": [
+          "tasks"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -150,6 +165,9 @@
       "post": {
         "summary": "Login",
         "description": "Use a POST request with the email and password in a JSON-Body",
+        "tags": [
+          "authorization"
+        ],
         "parameters": [
           {
             "name": "body",
@@ -184,6 +202,9 @@
       "get": {
         "summary": "Verify",
         "description": "Use a GET request to check the status of the client",
+        "tags": [
+          "authorization"
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -198,6 +219,9 @@
       "delete": {
         "summary": "Logout",
         "description": "Use a Delete request to log out",
+        "tags": [
+          "authorization"
+        ],
         "responses": {
           "200": {
             "description": "OK"

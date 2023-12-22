@@ -5,7 +5,7 @@ const { randomUUID } = require('crypto');
 const router = express.Router();
 
 let tasks = [];
-// #swagger.tags = ['Tasks']
+
 
 router.get('/', (req, res) => {
   if (req.session.email) {
