@@ -6,8 +6,9 @@ const router = express.Router();
 
 let tasks = [];
 
-
+// give back all tasks
 router.get('/', (req, res) => {
+  // Checks that the user is logged in
   if (req.session.email) {
     return res.status(200).json(tasks);
   }
@@ -17,7 +18,9 @@ router.get('/', (req, res) => {
   // #swagger.description = 'Use a GET request to get all existing tasks'
 });
 router.post('/', (req, res) => {
+  // Checks that the user is logged in
   if (req.session.email) {
+    //lets the user create a new task with a title and author
     if (!req.body.title || !req.body.author) {
       console.log('Error 422, an important information is missing');
       return res.status(422).json({
@@ -44,7 +47,9 @@ router.post('/', (req, res) => {
 });
 
 router.get('/:id', (req, res) => {
+  // Checks that the user is logged in
   if (req.session.email) {
+    //lets the user get one single task
     if (tasks.some((task) => task.id === req.params.id)) {
       return res.status(200).json(tasks.find((task) => task.id === req.params.id));
     }
@@ -57,7 +62,9 @@ router.get('/:id', (req, res) => {
   // #swagger.description = 'Use a Get request with an task id to get a single task'
 });
 router.patch('/:id', (req, res) => {
+  // Checks that the user is logged in
   if (req.session.email) {
+    //Lets the user change the author, the title or the completet at date
     if (tasks.some((task) => task.id === req.params.id)) {
       const oldTask = tasks.find((task) => task.id === req.params.id);
       oldTask.title = req.body.title || oldTask.title;
@@ -77,7 +84,9 @@ router.patch('/:id', (req, res) => {
 });
 
 router.delete('/:id', (req, res) => {
+  // Checks that the user is logged in
   if (req.session.email) {
+    //Lets the user delete a task
     if (tasks.some((task) => task.id === req.params.id)) {
       const deletedTask = tasks.filter((task) => task.id === req.params.id);
       tasks = tasks.filter((task) => task.id !== req.params.id);

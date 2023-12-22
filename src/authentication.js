@@ -29,6 +29,7 @@ router.post('/login', (req, res) => {
   // #swagger.description = 'Use a POST request with the email and password in a JSON-Body'
 });
 router.get('/verify', (req, res) => {
+  // Check the status of the cookie
   if (req.session.email) {
     return res.status(200).json({ email: req.session.email });
   }
