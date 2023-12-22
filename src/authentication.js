@@ -3,18 +3,22 @@ const express = require('express');
 
 const router = express.Router();
 
+// Set the password
 const credentials = {
   password: 'm295',
 };
+// #swagger.tags = ['Authentication']
 
+// POST for login
 router.post('/login', (req, res) => {
   const { email } = req.body;
   const { password } = req.body;
-
+  // Check that email and password aren't  empty
   if (!email || !password) {
     console.log('Error 422, Email and Password required');
     return res.status(422).json({ error: '422, Email and Password required' });
   }
+  // Checkt, das das Passwort übereinstimmt
   if (password === credentials.password) {
     req.session.email = email;
     return res.status(201).json({ email: req.session.email });

@@ -10,8 +10,10 @@ const swaggerDocument = require('../swagger.json');
 const app = express();
 const port = 3000;
 
+// Middleware to read json
 app.use(express.json());
 
+// load session-express module for cookies
 app.use(
   session({
     secret: 'supersecret',
@@ -20,7 +22,7 @@ app.use(
     cookie: {},
   }),
 );
-
+// Import endpoints from other files
 app.use(
   '/',
   authentication,
@@ -31,6 +33,7 @@ app.use(
   endpoints,
 );
 
+// load swagger-ui-express to display the swagger ui
 app.use('/swagger-ui', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.listen(port, () => {
